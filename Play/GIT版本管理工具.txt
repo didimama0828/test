@@ -1,0 +1,51 @@
+1.建立一個專案資料夾
+2.使用cmd，移到該專案資料夾
+3.git init (初始化)會產生一個.git的隱藏資料夾
+  git config --global user.name "didimama0828"  建立使用者
+  git config --global user.email "didimama0828@gmail.com" 建立使用者mail
+4.git status (查看狀態)
+5.git add 檔名 (單一檔案加入追蹤)
+6.git add .    (所有檔案加入追蹤)
+7.git commit -m "First Commit"  (作一個記錄)
+8.git log    (查看commit記錄)
+9.建立一個GitHub帳號
+10.建立一個Repository專案
+11.git remote -v   查詢遠端的Repository
+12.git remote add 遠端空間的名稱(隨便取都行) 網址
+13.git push 遠端空間的名稱 遠端空間的分支
+   git push origin master
+
+下載
+1.git clone 遠端空間的網址 本機資料夾名稱
+2.git pull 遠端空間的名稱  遠端空間的分支 (專案下載合併更新)
+
+
+上班
+1.git pull
+2.寫code
+3.git status
+4.git add .
+5.git commit -m "test commit"
+6.git puch origin master
+下班
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
