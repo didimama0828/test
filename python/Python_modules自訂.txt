@@ -1,0 +1,60 @@
+# 模組的載入與使用
+# 模組
+# 獨立的程式檔案:將程式寫在一個檔案中，此檔案可重複載入使用
+# 載入->使用  先載入模組，再使用模組中的函式或變數
+# 基本語法
+#import 模組名稱     #(一般來說就是檔案的名稱，不用加.py)
+#import 模組名稱 as 模組別名
+# 使用模組
+# 基本語法
+# 模組名稱或別名.函式名稱(參數資料)
+# 模組名稱或別名.變數名稱
+# 內建模組 (python自己也有內建很多模組可以使用)
+# sys 模組 : 取得系統相關資訊
+
+# 程式範例
+import sys
+# 使用 sys 模組   # 印出系統相關資訊的模組
+print(sys.platform) # 印出作業系統
+print(sys.maxsize) # 印出整數型態的最大值
+print(sys.path) # 印出搜尋模組的路徑
+
+# 載入 sys 模組
+import sys as s   # sys 模組別名設定為 s
+# 使用 sys 模組
+print(s.platform) # 印出作業系統
+print(s.maxsize) # 印出整數型態的最大值
+print(s.path) # 印出搜尋模組的路徑
+
+# 自訂模組
+# 建立幾何運算模組 : 建立檔案 geometry.py，定義平面幾何運算用的函式
+# 載入與使用 : 載入 geometry 模組，並使用模組中定義的功能
+
+# 建立內建的 sys 模組並取得資訊
+import sys
+print(sys.platform)
+print(sys.maxsize)
+print(sys.path)
+# 取別名為s
+import sys as s
+print(s.platform)
+print(s.maxsize)
+print(s.path)
+s.path.append("modules")
+print(s.path)
+# 建立 geometry 模組，載入使用  (python模組就是python的程式檔案，建立一個新的python程式檔案當作模組)
+import geometry
+result=geometry.distance(1,1,5,5)
+print(result)
+result=geometry.slope(1,2,5,6)
+print(result)
+
+# 調整搜尋模組的路徑
+import sys
+print(sys.path) # 印出模組的搜尋路徑 
+# (會印出一個列表，python會去列表中每一個資料夾一一搜尋模組，模組必須放在這些路徑之中才找的到)
+sys.path.append("modules") # 新增一個搜尋路徑 : 當前路徑下的 modules (相對路徑，也可以寫絕對路徑)
+print(sys.path)
+print("-----------------")
+import geometry
+print(geometry.distance(1,1,5,5))
